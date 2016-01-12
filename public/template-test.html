@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="templateTest">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/angular.css">
+    <title>Bootstrap an Angular Module</title>
+</head>
+<body>
+
+	<ul>
+    	<li ng-repeat="num in [1, 2, 3, 4, 5, 6, 7, 8, 9]" ng-if="num % 3 == 0">{{num}}</li>
+	</ul>
+
+	<ul>
+    	<li ng-repeat="letter in ['A', 'B', 'C', 'D', 'E', 'F']" ng-if="letter == 'A'">{{ letter | uppercase }}</li>
+	</ul>
+
+	<ul>
+    	<li ng-repeat="img in ['/img/cat1.jpg', '/img/cat2.jpeg', '/img/jeromecat.jpg']"><img ng-src="{{ img }}"></li>
+	</ul>
+
+	<form>
+	    <label for="first_name">First Name</label>
+	    <input type="text" id="first_name" ng-model="user.firstName">
+
+	    <label for="last_name">Last Name</label>
+	    <input type="text" id="last_name"  ng-model="user.lastName">
+
+	    <label for="email">eMail</label>
+	    <input type="email" id="email" ng-model="user.email">
+
+	    <label for="password">Password</label>
+	    <input type="password" id="password" ng-model="user.password">
+	</form>
+
+
+    <script type="text/javascript" src="/js/angular.min.js"></script>
+    <script type="text/javascript" src="/js/templateTest.js"></script>
+</body>
+</html>
